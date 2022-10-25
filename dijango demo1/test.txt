@@ -1,0 +1,25 @@
+# 1.安装django
+'''
+python目录介绍：
+    D:\python3.9.13
+        --python.exe
+        --scrips
+            --pip.exe
+            --pip3.exe
+            --pip3.9.exe
+            --django-admin.exe [创建项目的工具，创建默认文件夹]
+        --lib
+            --内置模块
+            --site-packages
+                --openpyxl
+                --python-docx
+                --flask
+                --django [框架源码]
+
+'''
+# 2.创建项目
+'''
+
+
+
+'''
