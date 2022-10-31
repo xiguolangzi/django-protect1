@@ -1,0 +1,104 @@
+# 1.安装django
+'''
+python目录介绍：
+    D:\python3.9.13
+        --python.exe
+        --scrips
+            --pip.exe
+            --pip3.exe
+            --pip3.9.exe
+            --django-admin.exe [创建项目的工具，创建默认文件夹]
+        --lib
+            --内置模块
+            --site-packages
+                --openpyxl
+                --python-docx
+                --flask
+                --django [框架源码]
+
+'''
+# 2.创建项目
+'''
+创建项目命令：
+django-admin  startproject CreateFactura
+
+createFactura
+    --manage.py [项目的管理，启动项目、创建app、数据管理]
+    --mysite
+        --__init__.py	【】
+        --settings.py	【配置文件：中间件】
+        --urls.py	【url和函数的对应关系】【常常操作】
+        --wsgi.py	【同步接受网络请求】【不要动】
+        --asgi.py	【异步接受网络请求】【不要动】
+
+'''
+
+# 3.APP
+'''
+1.创建APP：
+    python manage.py startapp app01
+
+2.app01目录讲解
+    __init__,py
+    admin.py    【不动】默认提供后台管理
+    apps.py     【不动】app启动类
+    migrations  【不动】数据库变更记录
+        __init__.py
+    tests.py    【不动】单元测试
+    主要用到：
+    models.py   对数据库操作
+    views.py    函数
+
+'''
+
+
+# 4.快速上手
+'''
+1.注册APP
+    settings -> INSTALLED_APPS , 'app01.apps.App01Config' (注意apps.py 中的name)
+
+2.编写URL 和视图的对应关系
+    urls.py -> 配置path(url路径，视图路径函数)，
+    视图路径：对应app的views.py文件，需要导包 from app01 import views
+
+3.编写视图函数
+
+
+4.启动django项目
+    命令启动：python manage.py runserver
+
+'''
+
+# 5. 引入模板
+    # 返回页面 render
+    #默认去app 下 找对应的 templates目录中找 (回去所有注册的app中去寻找，按顺序查找)
+    #具体查找目录，优先找配置文件settings 中 TEMPLATES ，dir 寻找
+
+
+# 6.静态文件
+'''
+    1.创建静态文件目录：
+    static
+        css
+        img
+        js
+            jquery
+        plugins
+            bootstrap
+
+    2.引用静态文件
+        {%load static%}
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
